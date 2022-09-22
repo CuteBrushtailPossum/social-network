@@ -1,38 +1,100 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+background-color: rgb(51, 41, 75);
+color: aliceblue;
+}
+.app-container>div{
+  background-color: rgb(15, 0, 49);
+  border-radius: 10px;
+  padding: 10px;
+}
+.app-container {
+  display: grid;
+  grid-template-areas: "h h" "n p";
+  grid-gap: 10px;
+  grid-template-columns: 1fr 3fr;
+  margin: 50px;
+}
+.header {
+  grid-area: h;
+}
+.navbar {
+  grid-area: n;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.profile {
+  grid-area: p;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header img {
+  width: 100px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar a {
+display: block;
+margin-top: 10px;
+color: aliceblue;
+text-decoration: none;
+font-size: 25px;
+}
+.me img {
+  width: 250px;
+}
+.post img {
+  width: 50px;
+}
+.me {
+  display: flex;
+}
+div {
+  margin-top: 10px;
+}
+img {
+  margin-top: 10px;
+}
+.myposts {
+  margin-bottom: 20px;
+}
+.messagebtn  {
+  display: block;
+  text-decoration: none;
+  color:rgb(15, 0, 49);
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: azure;
+  text-align: center;
+  padding: 5px;
+}
+.status {
+  color: rgb(155, 155, 155);
+  margin-bottom: 10px;
+}
+.profileinfo {
+  padding: 20px;
+}
+.contacts {
+  display: flex;
+}
+li {
+  list-style-type: none;
+}
+.chat {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 0%;
+  margin-left: 5px;
 }
-
-.App-link {
-  color: #61dafb;
+.sendbutton, .messagebox {
+  margin-top: 10px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.line {
+  width: 3px;
+  height: 65px;
+  background-color: aliceblue;
+  margin-top: 0;
+  margin-right: 5px;
+  margin-left: 5px;
 }
+/* Дописать стили для компоненты с сообщениями, создать компоненту для отдельного сообщения с пропсами */
