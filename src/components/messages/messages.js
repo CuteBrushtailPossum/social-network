@@ -1,21 +1,20 @@
 import React from "react";
 import Message from "./message";
-function Messages() {
+import {NavLink} from 'react-router-dom'
+import Messageuser from "./messageuser";
+import './messages.css'
+function Messages(props) {
     return(
         <div className="messages">
             <div className="contacts">
-                <ul>
-                    <li>John</li>
-                    <li>Bob</li>
-                    <li>Lisa</li>
-                </ul>
+                <div className="users">
+                  {props.dialogues.map((e)=><Messageuser id={e.id} username={e.username}/>)}
+                </div>
                 <div className="line"></div>
                 <div className="chat">
-                    <ul>
-                        <li><Message messagebox='Hello'/></li>
-                        <li>Let's go to park</li>
-                        <li>Sure</li>
-                    </ul>
+                    <div>
+                        {props.messagetext.map((e)=><Message id={e.id} messagebox={e.text}/>)}
+                    </div>
                     <textarea className="messagebox"></textarea>
                     <button className="sendbutton">Send</button>
                 </div>

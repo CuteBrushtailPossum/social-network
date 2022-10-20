@@ -97,4 +97,22 @@ li {
   margin-right: 5px;
   margin-left: 5px;
 }
-/* Дописать стили для компоненты с сообщениями, создать компоненту для отдельного сообщения с пропсами */
+a {
+  text-decoration: none;
+  color: white;
+}
+.users {
+  flex-grow: 1;
+  text-align: center;
+}
+.chat {
+  flex-grow: 3;
+}
+.usermessage:hover {
+  background-color:mediumpurple;
+}
+.usermessage {
+  margin-top: 5px;
+}
+/* Дописать пропсы в компоненте messages.js, написать массив с объектами ([{},{}]) - не забудь прописать id и текст поста. Заменить пропсы
+*/

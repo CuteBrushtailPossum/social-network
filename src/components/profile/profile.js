@@ -2,7 +2,7 @@ import React from 'react'
 import avatar from '../../img/avatar.png'
 import Posts from './posts/posts'
 import Messages from '../messages/messages'
-function Profile(){
+function Profile(props){
     return(
         <div className='profile'> 
             <div className='me'>
@@ -18,8 +18,7 @@ function Profile(){
                     <p><span>Education:</span> Oxford</p>
                 </div>
             </div>
-            <Posts></Posts>
-            <Messages></Messages>
+            <Posts post={props.post}></Posts>
         </div>
 )}
 export default Profile
